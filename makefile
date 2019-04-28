@@ -1,4 +1,4 @@
-OBJ = main.o 
+OBJ = main.o count.o screen.o
 APPNAME = chart.out
 
 #math library is used
