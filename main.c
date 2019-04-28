@@ -1,26 +1,16 @@
 #include <stdio.h>
 #include <string.h>
+#include "count.h"
+#include "screen.h"
+
 int main(){
-	FILE *data = fopen("wlist.txt", "r");
-	char string[10];
-	int count[26]={0}, numOfWords=0;
-	fscanf(data, "%s", &string);
-	while(!feof(data)){
-		numOfWords++;
-		for (int i=65; i<=90; i++){
-			char a[2];
-			a[0]=i;
-			if (string[0]==a[0]){
-				count[i-65]++;
-			}
-		}
-		fscanf(data, "%s", &string);
-	}
-	fclose(data);
-	printf("The number of words: %d\n", numOfWords);
-	for (int i=65; i<=90; i++){
-		char a[2];
-    	a[0]=i;
-		printf("The number of words that are starting with %c: %d\n", a[0], count[i-65]);
-	}
+    FILE *data;
+    printf("The number of words: %d\n", NumOfWord(data));
+//    WordStartingLetter(data);
+	setColors(CYAN, bg(BLACK));
+	barChart1(data);
+	setColors(GREEN, bg(BLACK));
+	barChart2(data);
+//	FindWordDuplicate(data);
 }
+
