@@ -2,6 +2,8 @@
 #include "screen.h"
 #include <string.h>
 
+// this function uses to display a barchart which shows the number of words
+// starting from letter A to Z
 void barChart1(FILE *data){
     data = fopen("wlist.txt", "r");
     char string[10], a[2];
@@ -11,7 +13,7 @@ void barChart1(FILE *data){
         for (i=65; i<=90; i++){ // ascii table A..Z (65..90)
             a[0]=i; // asign the characters A..Z to array a
             if (string[0]==a[0]){
-                count[i-65]++; // counts the number of words due to their letter
+                count[i-65]++; // counts the number of words due to their first letter
             }
         }
         fscanf(data, "%s", &string);
@@ -28,6 +30,7 @@ void barChart1(FILE *data){
 			printf("%c", '*');
 #endif
 		}
+		// display the values above every bar
 		if (count[i]>0){
 			printf("\033[%d;%dH", 36-j+1, (2*i)+1);
 			printf("%d", count[i]);
@@ -48,6 +51,7 @@ void barChart1(FILE *data){
 
 
 // function uses to count how many times letter 'A' ('B'..'Z') appeared in file wlist.txt
+// and display them as a barchart
 void barChart2(FILE *data){
     data = fopen("wlist.txt", "r");
     char string[10], a[2];
@@ -57,7 +61,7 @@ void barChart2(FILE *data){
         for (i=65; i<=90; i++){
             a[0]=i;
             for (j=0; j<strlen(string); j++){
-                if (string[j]==a[0]) count[i-65]++;
+                if (string[j]==a[0]) count[i-65]++; // increases the sum of appearance of every letter
             }
         }
         fscanf(data, "%s", &string);
@@ -72,6 +76,7 @@ void barChart2(FILE *data){
             printf("%c", '*');
 #endif
         }
+		// displays the values above every bar
 		if (count[i]>0){
 			printf("\033[%d;%dH", 36-j+1, 60+(2*i)+1);
 			printf("%d",count[i]);

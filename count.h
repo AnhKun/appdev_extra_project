@@ -1,0 +1,1 @@
+int NumOfWord(FILE *data);
