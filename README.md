@@ -17,7 +17,7 @@ List of contents:
 ## 1. Configuration Instruction
 
 This project I built in Putty environment, but you don't need to download Putty. You can run this project in your own 
-environment you usually use.
+environment that you usually use.
 
 ## 2. Installation Instruction
 
@@ -27,7 +27,7 @@ environment you usually use.
 ## 3. Operation Instruction
 
 - Run `make` command in your terminal to compile the project. 
-- Run `./chart.out` command to get two barchart. 
+- Run `./chart.out` command to get two barcharts. 
 - Run `make clean` command to remove file object in your folder
 
 ## 4. List of files
@@ -42,7 +42,7 @@ environment you usually use.
 
 ## 5. Copyright
 
-This project I use for my homework, so you can use as a documentation but please **DO NOT** use to submit your homework. 
+This project I use for my homework, so you can use it as a documentation. However, please **DO NOT** use it to submit your homework. 
 Teacher is going to use **URKUND** to check your source code.
 
 ## 6. Contact Info
