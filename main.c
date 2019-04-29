@@ -14,6 +14,5 @@ int main(){
 	barChart1(data);
 	setColors(GREEN, bg(BLACK));
 	barChart2(data);
-//	FindWordDuplicate(data);
 }
 
