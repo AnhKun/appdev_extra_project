@@ -1,6 +1,6 @@
 # appdev_extra_project
 
-This project aims to get the words from wlist.text, counts the number of words which start from letter A to Z and display them 
+This project aims to get the words from wlist.txt, counts the number of words which start from letter A to Z and display them 
 as a barchart1. Similarly, this project also counts the number of times of letter A to Z which appear in file wlist.txt as a 
 barchart2. 
 
@@ -16,13 +16,13 @@ List of contents:
 
 ## 1. Configuration Instruction
 
-This project I built in Putty environment, but you don't need to download Putty. You can run this project in your own 
+This project I built by using Putty, but you don't need to download it. You can run this project in your own 
 environment that you usually use.
 
 ## 2. Installation Instruction
 
 - Clone this project from my github: `git clone https://github.com/AnhKun/appdev_extra_project` 
-- Run system function() by using `wget http://www.cc.puv.fi/~gc/wlist.txt` command to get file wlist.txt to your folder
+- Run `wget http://www.cc.puv.fi/~gc/wlist.txt` command in your terminal to get file wlist.txt to your folder
 
 ## 3. Operation Instruction
 

@@ -10,12 +10,7 @@ void barChart1(FILE *data){
     int count[26]={0}, i, j;
     fscanf(data, "%s", &string); // gets the word from file and asigns it to variable string
     while(!feof(data)){ // condition of end of file
-        for (i=65; i<=90; i++){ // ascii table A..Z (65..90)
-            a[0]=i; // asign the characters A..Z to array a
-            if (string[0]==a[0]){
-                count[i-65]++; // counts the number of words due to their first letter
-            }
-        }
+		count[string[0]-'A']++;
         fscanf(data, "%s", &string);
     } // while()
     fclose(data);
@@ -32,7 +27,7 @@ void barChart1(FILE *data){
 		}
 		// display the values above every bar
 		if (count[i]>0){
-			printf("\033[%d;%dH", 36-j+1, (2*i)+1);
+			printf("\033[%d;%dH", 36-j, (2*i)+1);
 			printf("%d", count[i]);
 		}
 		// display A, B,... below the chart
@@ -58,12 +53,8 @@ void barChart2(FILE *data){
     int count[26]={0}, i, j;
     fscanf(data, "%s", &string);
     while (!feof(data)){
-        for (i=65; i<=90; i++){
-            a[0]=i;
-            for (j=0; j<strlen(string); j++){
-                if (string[j]==a[0]) count[i-65]++; // increases the sum of appearance of every letter
-            }
-        }
+		for (i=0; i<strlen(string); i++)
+			count[string[i]-'A']++;
         fscanf(data, "%s", &string);
     }
 	fclose(data);
@@ -78,7 +69,7 @@ void barChart2(FILE *data){
         }
 		// displays the values above every bar
 		if (count[i]>0){
-			printf("\033[%d;%dH", 36-j+1, 60+(2*i)+1);
+			printf("\033[%d;%dH", 36-j, 60+(2*i)+1);
 			printf("%d",count[i]);
 		}
 		// display A, B... below the chart
