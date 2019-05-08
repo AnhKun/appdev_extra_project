@@ -2,9 +2,11 @@
 #include <string.h>
 #include "count.h"
 #include "screen.h"
+#include <stdlib.h> // uses for system function
 
 int main(){
     FILE *data;
+	system("wget http://www.cc.puv.fi/~gc/wlist.txt"); // download wlist.txt file to folder
 	clearScreen();
 	printf("\033[0;0H");
 	printf("The number of words: %d\n", NumOfWord(data));
@@ -14,5 +16,6 @@ int main(){
 	barChart1(data);
 	setColors(GREEN, bg(BLACK));
 	barChart2(data);
+	system("rm wlist.txt"); // remove wlist.txt file
 }
 
