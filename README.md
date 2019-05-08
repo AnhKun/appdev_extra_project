@@ -22,7 +22,6 @@ environment that you usually use.
 ## 2. Installation Instruction
 
 - Clone this project from my github: `git clone https://github.com/AnhKun/appdev_extra_project` 
-- Run `wget http://www.cc.puv.fi/~gc/wlist.txt` command in your terminal to get file wlist.txt to your folder
 
 ## 3. Operation Instruction
 
