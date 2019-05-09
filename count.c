@@ -3,7 +3,8 @@
 #include "count.h"
 
 // function uses to count the number of words in file wlist.txt 
-int NumOfWord(FILE *data){
+int NumOfWord(){
+	FILE *data;
 	data = fopen("wlist.txt", "r"); // open file wlist.txt
 	char string[10];
     int sum=0;

@@ -4,15 +4,15 @@
 
 // this function uses to display a barchart which shows the number of words
 // starting from letter A to Z
-void barChart1(FILE *data){
-    data = fopen("wlist.txt", "r");
+void barChart1(){
+    FILE *data;
+	data = fopen("wlist.txt", "r");
     char string[10], a[2];
     int count[26]={0}, i, j;
-    fscanf(data, "%s", &string); // gets the word from file and asigns it to variable string
-    while(!feof(data)){ // condition of end of file
+	do{
+    	fscanf(data, "%s", &string); // gets the word from file and asigns it to variable string
 		count[string[0]-'A']++;
-        fscanf(data, "%s", &string);
-    } // while()
+    }while(!feof(data)); // condition of end of file
     fclose(data);
 
 	// takes the array count[] to display barchart 1
@@ -47,16 +47,16 @@ void barChart1(FILE *data){
 
 // function uses to count how many times letter 'A' ('B'..'Z') appeared in file wlist.txt
 // and display them as a barchart
-void barChart2(FILE *data){
+void barChart2(){
+	FILE *data;
     data = fopen("wlist.txt", "r");
     char string[10], a[2];
     int count[26]={0}, i, j;
-    fscanf(data, "%s", &string);
-    while (!feof(data)){
+	do {
+	    fscanf(data, "%s", &string);
 		for (i=0; i<strlen(string); i++)
 			count[string[i]-'A']++;
-        fscanf(data, "%s", &string);
-    }
+    }while (!feof(data));
 	fclose(data);
     for (i=0; i<26; i++){ // for 26 columns
         for (j=0; j<count[i]/5; j++){

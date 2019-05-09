@@ -1,1 +1,1 @@
-int NumOfWord(FILE *data);
+int NumOfWord();

@@ -7,5 +7,5 @@ enum COLORS{BLACK=30, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE}; // foregr
 void clearScreen(void);
 void setColors(short, short);
 void resetColors(void);
-void barChart1(FILE *);
-void barChart2(FILE *);
+void barChart1();
+void barChart2();
